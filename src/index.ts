@@ -2,11 +2,12 @@
 
 import chalk from "chalk";
 import inquirer from "inquirer";
-import simpleGit from "simple-git";
+import simpleGit, { SimpleGit } from "simple-git";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
-const git = simpleGit();
+// @ts-ignore
+const git: SimpleGit = simpleGit();
 
 async function switchBranch(remote = false) {
   const branchType = remote ? "remote" : "local";
