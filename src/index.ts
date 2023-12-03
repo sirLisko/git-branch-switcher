@@ -6,7 +6,7 @@ import simpleGit, { SimpleGit } from "simple-git";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
-// @ts-ignore
+//@ts-expect-error types are wrong
 const git: SimpleGit = simpleGit();
 
 async function switchBranch(remote = false) {
