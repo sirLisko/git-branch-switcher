@@ -20,7 +20,7 @@ dependencies:
 
 devDependencies:
   '@changesets/cli':
-    specifier: ^2.26.2
+    specifier: ^2.27.1
     version: 2.27.1
   '@types/node':
     specifier: '20'
