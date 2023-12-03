@@ -14,7 +14,7 @@ async function switchBranch(remote = false) {
     let branches = [];
     if (remote) {
       branches = (await git.branch(["-r"])).all.map(
-        (branch) => branch.split("origin/")[1]
+        (branch) => branch.split("origin/")[1],
       );
     } else {
       branches = (await git.branchLocal()).all;
@@ -31,7 +31,7 @@ async function switchBranch(remote = false) {
 
     await git.checkout(branch);
     console.log(
-      chalk.greenBright(`Switched to ${branchType} branch '${branch}'`)
+      chalk.greenBright(`Switched to ${branchType} branch '${branch}'`),
     );
   } catch (error) {
     console.error(chalk.redBright(error));
@@ -47,7 +47,7 @@ yargs(hideBin(process.argv))
     },
     (argv) => {
       switchBranch(argv.remote);
-    }
+    },
   )
   .option("remote", {
     alias: "r",
