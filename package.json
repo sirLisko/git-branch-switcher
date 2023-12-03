@@ -1,6 +1,6 @@
 {
   "name": "git-branch-switcher",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Easily switch between branches in your git repository.",
   "main": "dist/index.js",
   "files": [
